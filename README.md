@@ -12,12 +12,15 @@ Since I'm switching from AngularJs to Angular I will start collecting and summar
 - [Official angular.io site](https://angular.io) including [docs](https://angular.io/docs) and [API](https://angular.io/api)
 - [German Angular book](https://angular-buch.com/blog) with its examples on [GitHub](https://github.com/book-monkey2-build)
 
+# ToC
+The subfolders contains examples of the following blog cheatsheet series:
+
+[Blog 01 Generating a new project](http://software-developer.org/2019/02/11/Angular-cheatsheet-01-new-project/) ([GitHub example](https://github.com/taitruong/angular-examples/tree/master/Cheatsheet01Project))
+
 # Updates
 Updates and progress of my learnings can be found on my [blog](http://software-developer.org/2019/02/11/Angular-cheatsheet-00-in-aNutshell-with-cheatsheets-collection/) with examples here on GitHub.
 
-# Preparations
-
-## Install Node, Angular and CLI
+# Install Node, Angular and CLI
 Install nodejs
 
 ```
