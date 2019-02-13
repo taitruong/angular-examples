@@ -19,7 +19,7 @@ The subfolders contains examples of the following blog cheatsheet series:
 
 [02. Components](http://software-developer.org/2019/02/11/Angular-cheatsheet-02-component/) - [GitHub example](https://github.com/taitruong/angular-examples/tree/master/Cheatsheet02Component)
 
-[02.01. Templates](http://software-developer.org/2019/02/12/Angular-cheatsheet-0201-component-template/) - [GitHub example](https://github.com/taitruong/angular-examples/tree/master/Cheatsheet0201Template)
+[02.01. Templates](http://software-developer.org/2019/02/12/Angular-cheatsheet-0201-template-syntax/) - [GitHub example](https://github.com/taitruong/angular-examples/tree/master/Cheatsheet0201Template)
 
 # Updates
 Updates and progress of my learnings can be found on my [blog](http://software-developer.org/2019/02/11/Angular-cheatsheet-00-in-aNutshell-with-cheatsheets-collection/) with examples here on GitHub.
