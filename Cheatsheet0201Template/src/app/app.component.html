@@ -22,4 +22,11 @@
     <a [href]="resource.url">{{ i + 1 }}.  {{ resource.title ? resource.title : resource.url }}</a>
   </li>
 </ul>
+
+
 <button (click)="log1();log2()">log 1 and log 2</button>
+
+<!-- binding between two component properties-->
+<app-other [otherProperty]="appProperty"></app-other>
+<p><button (click)="logProp()">log app property</button></p>
+<p><button (click)="resetProp()">reset app property</button></p>

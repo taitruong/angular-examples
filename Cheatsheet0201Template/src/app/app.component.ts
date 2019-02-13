@@ -10,6 +10,7 @@ export class AppComponent implements OnInit {
   urls: any[];
   test: number;
   resources: object[];
+  appProperty: string;
 
   ngOnInit() {
     this.title = 'Cheatsheat 02.01. Template Syntax';
@@ -28,6 +29,8 @@ export class AppComponent implements OnInit {
       url: 'https://angular-buch.com/blog'}
     ];
 
+    this.appProperty = 'some value from main app component';
+
   }
 
   public log1() {
@@ -36,5 +39,14 @@ export class AppComponent implements OnInit {
 
   public log2() {
     console.log('>>> log 2');
+  }
+
+  public logProp() {
+    console.log('The following has been passed from the main app component to this other component: ' + this.appProperty);
+  }
+
+  public resetProp() {
+    // resetting this property won't affect other component's property!
+    this.appProperty = 'some value from main app component';
   }
 }
