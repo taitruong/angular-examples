@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, EventEmitter, Output, Input } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -12,16 +12,20 @@ export class AppComponent implements OnInit {
   label: string;
   label2: string;
   urls: any[];
-  test: number;
   resources: object[];
   appProperty: string;
   yourName: string;
+
+  @Input()
+  input: string;
+
+  @Output()
+  inputChange = new EventEmitter();
 
   ngOnInit() {
     this.title = 'Cheatsheat 02.01. Template Syntax';
     this.label = 'some text';
     this.label2 = 'change me!';
-    this.yourName = '';
 
     this.urls = [
       {title: 'Angular in a Nutshell - Cheatsheets collection',
@@ -38,6 +42,8 @@ export class AppComponent implements OnInit {
     ];
 
     this.appProperty = 'some value from main app component';
+
+    this.yourName = '';
 
   }
 

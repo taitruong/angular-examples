@@ -52,6 +52,14 @@
   <div><input [value]="yourName" (input)="yourName=$event.target.value" ></div>
   <div>Your name: {{yourName}}</div>
 
+<!-- two-way binding using ngModel directive. Important: FormsModule needs to be imported in AppModule!-->
+  <!-- simple standalone ngModel-->
+  <div>Enter input: <input [(ngModel)]="input"></div>
+  <div>Entered input: {{input}}</div>
+  <!-- in a form requires assigning ngModel to input element (with name 'inputElement') -->
+  <form>Enter input: <input [(ngModel)]="input" name="inputElement" #inputElement="ngModel"></form>
+  <div>Entered input: {{inputElement.value}}</div>
+
 <h2>Other useful resources</h2>
 <ul>
   <li *ngFor="let resource of resources; index as i">
