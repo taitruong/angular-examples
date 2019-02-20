@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "Cheatsheet01Project": {
+    "Cheatsheet0100Project": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/Cheatsheet01Project",
+            "outputPath": "dist/Cheatsheet0100Project",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -62,18 +62,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "Cheatsheet01Project:build"
+            "browserTarget": "Cheatsheet0100Project:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "Cheatsheet01Project:build:production"
+              "browserTarget": "Cheatsheet0100Project:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "Cheatsheet01Project:build"
+            "browserTarget": "Cheatsheet0100Project:build"
           }
         },
         "test": {
@@ -107,7 +107,7 @@
         }
       }
     },
-    "Cheatsheet01Project-e2e": {
+    "Cheatsheet0100Project-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "prefix": "",
@@ -116,11 +116,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "Cheatsheet01Project:serve"
+            "devServerTarget": "Cheatsheet0100Project:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "Cheatsheet01Project:serve:production"
+              "devServerTarget": "Cheatsheet0100Project:serve:production"
             }
           }
         },
@@ -136,5 +136,5 @@
       }
     }
   },
-  "defaultProject": "Cheatsheet01Project"
+  "defaultProject": "Cheatsheet0100Project"
 }
