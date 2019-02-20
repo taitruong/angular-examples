@@ -3,17 +3,25 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styles: []
+  styles: [
+    '.my-style {color: red}'
+  ]
 })
 export class AppComponent implements OnInit {
   title: string;
+  label: string;
+  label2: string;
   urls: any[];
   test: number;
   resources: object[];
   appProperty: string;
+  yourName: string;
 
   ngOnInit() {
     this.title = 'Cheatsheat 02.01. Template Syntax';
+    this.label = 'some text';
+    this.label2 = 'change me!';
+    this.yourName = '';
 
     this.urls = [
       {title: 'Angular in a Nutshell - Cheatsheets collection',
@@ -33,20 +41,25 @@ export class AppComponent implements OnInit {
 
   }
 
-  public log1() {
-    console.log('>>> log 1');
+  public addPrefix() {
+    this.label = 'p-' + this.label;
   }
 
-  public log2() {
-    console.log('>>> log 2');
-  }
-
-  public logProp() {
-    console.log('The following has been passed from the main app component to this other component: ' + this.appProperty);
+  public addSuffix() {
+    this.label = this.label + '-s';
   }
 
   public resetProp() {
     // resetting this property won't affect other component's property!
-    this.appProperty = 'some value from main app component';
+    this.appProperty = 'default value from app component';
   }
+
+  public changeMe() {
+    this.label2 = 'changed';
+  }
+
+  public changeMe2() {
+    this.label2 = 'changed again';
+  }
+
 }

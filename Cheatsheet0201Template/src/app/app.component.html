@@ -1,32 +1,60 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-</div>
-<h2>Please also have a look at my other resources:</h2>
-<ul>
-  <li>
-    <h3><a [href]="urls[0].url">{{urls[0].title}}</a></h3>
-  </li>
-  <li>
-    <h3><a href="urls[1]?.url">{{urls[1]?.title}}</a></h3>
-  </li>
-  <li>
-    <h3><a href="urls[2]?.url">{{urls[2]?.title}}</a></h3>
-  </li>
-  </ul>
+<!-- Interpolation: evaluates and converts an expression
+  - Syntax: {{some expression}}
+  - evaluates title property from app component and then
+  - converts it as a string into this template -->
+<div style="text-align:center"><h1>Welcome to {{ title }}!</h1></div>
+
+<!-- Template Statements
+  - responds to events
+  - example: AppComponent's addPrefix() and addSuffix() -->
+<p>{{label}}</p>
+<button (click)="addPrefix();addSuffix()">Prepend and append 'some text' with 'p-' and '-s'</button>
+
+<!--Bindings - 3 types of bindings
+  - one-way from data source to view target / source-to-view: property, attribute, class, and style bindings
+  - one-way from view target to data source  / view-to-source: event binding
+  - two-way view-to-source-to-view: two-way binding of data and element properties -->
+
+<!-- source-to-view data binding -->
+  <!--Property binding on DOM property 'href' -->
+  <p><a [href]="urls[0].url">{{urls[0].title}}</a></p>
+  <p><a href="urls[0].url">This link won't work since href (HTML attribute) and not [href] (DOM property) is used!</a></p>
+  <p><a [href]="urls[1].url">{{urls[1].title}}</a></p>
+
+  <!-- Property binding between two components (app and other)-->
+  <div>-------------------------------------------</div>
+  <strong>> This part is from component 'app'</strong>
+  <div>{{appProperty}}</div>
+  <p><button (click)="resetProp()">reset app property</button></p>
+
+  <app-other [otherProperty]="appProperty"></app-other>
+
+  <!--Attribute binding using 'attr.' prefix -->
+  <table border=1>
+      <tr><td [attr.colspan]="1 + 1">attribute binding of 'colspan'</td></tr>
+      <tr><td>aaa</td><td>bbb</td></tr>
+  </table>
+
+  <!-- Class binding -->
+  <div [class.my-style]="true">CSS class binding</div>
+
+  <!-- Style binding -->
+  <div [style.color]="'red'">style binding</div>
+  <div [style.color]="false ? 'red' : 'green'">yet another style binding</div>
+
+<!-- view-to-source data binding / event binding -->
+  <!-- Click event with template statement changeMe()-->
+  <div>{{label2}}</div>
+  <button (click)="changeMe()">change 1</button>
+  <!-- Alternatively use 'on-' prefix-->
+  <button on-click="changeMe2()">change 2</button>
+  <!-- $event (=DOM input event) with target property (=DOM input element with value property) -->
+  <div><input [value]="yourName" (input)="yourName=$event.target.value" ></div>
+  <div>Your name: {{yourName}}</div>
+
 <h2>Other useful resources</h2>
 <ul>
   <li *ngFor="let resource of resources; index as i">
     <a [href]="resource.url">{{ i + 1 }}.  {{ resource.title ? resource.title : resource.url }}</a>
   </li>
 </ul>
-
-
-<button (click)="log1();log2()">log 1 and log 2</button>
-
-<!-- binding between two component properties-->
-<app-other [otherProperty]="appProperty"></app-other>
-<p><button (click)="logProp()">log app property</button></p>
-<p><button (click)="resetProp()">reset app property</button></p>
