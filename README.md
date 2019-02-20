@@ -15,9 +15,9 @@ Since I'm switching from AngularJs to Angular I will start collecting and summar
 # ToC
 The subfolders contains examples of the following blog cheatsheet series:
 
-[01. Generating a new project](http://software-developer.org/2019/02/11/Angular-cheatsheet-01-new-project/) - [GitHub example](https://github.com/taitruong/angular-examples/tree/master/Cheatsheet01Project)
+[01. Generating a new project](http://software-developer.org/2019/02/11/Angular-cheatsheet-01-new-project/) - [GitHub example](https://github.com/taitruong/angular-examples/tree/master/Cheatsheet0100Project)
 
-[02. Components](http://software-developer.org/2019/02/11/Angular-cheatsheet-02-component/) - [GitHub example](https://github.com/taitruong/angular-examples/tree/master/Cheatsheet02Component)
+[02. Components](http://software-developer.org/2019/02/11/Angular-cheatsheet-02-component/) - [GitHub example](https://github.com/taitruong/angular-examples/tree/master/Cheatsheet0200Component)
 
 [02.01. Templates](http://software-developer.org/2019/02/12/Angular-cheatsheet-0201-template-syntax/) - [GitHub example](https://github.com/taitruong/angular-examples/tree/master/Cheatsheet0201Template)
 
